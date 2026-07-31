@@ -4,40 +4,34 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Lantern Capital</title>
-<meta name="description" content="Lantern Capital invests in founders that accelerate communication between machines and the ledger.">
+<meta name="description" content="Lantern Capital is a fund built to be the trusted bridge to Asia for global deep tech and biotech founders.">
 <meta property="og:title" content="Lantern Capital">
-<meta property="og:description" content="Lantern Capital invests in founders that accelerate communication between machines and the ledger.">
+<meta property="og:description" content="Lantern Capital is a fund built to be the trusted bridge to Asia for global deep tech and biotech founders.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://lantern.capital">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <style>
   :root{
     --void:#0b0805;
     --cream:#f4ede3;
     --cream-soft:rgba(248,238,218,.72);
-    --cream-dim:rgba(248,238,218,.42);
-    --gold:#e0a25a;
     --gold-2:#f7dda0;
-    --maroon:#7c1f17;
     --mono:'Space Mono',ui-monospace,monospace;
     --body:'Archivo',system-ui,sans-serif;
   }
   *{margin:0;padding:0;box-sizing:border-box}
-  html{scroll-behavior:smooth}
+  html,body{height:100%;overflow:hidden}
   body{
     background:var(--void);color:var(--cream);
     font-family:var(--body);font-weight:400;line-height:1.6;
     -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
-    overflow-x:clip;
   }
-  a{color:inherit;text-decoration:none}
 
-  /* ============ SPLASH ============ */
   .splash{
-    position:relative;min-height:100vh;min-height:100svh;
+    position:relative;height:100vh;height:100svh;
     display:flex;align-items:center;justify-content:center;
     overflow:hidden;
   }
@@ -72,69 +66,34 @@
     position:relative;display:block;width:94px;height:127px;fill:#fcfaf4;
     filter:drop-shadow(0 0 13px rgba(244,140,96,.92)) drop-shadow(0 0 36px rgba(212,78,52,.62)) drop-shadow(0 0 82px rgba(150,44,30,.55));
   }
-  .splash-wordmark{position:absolute;left:0;right:0;top:calc(50% + 98px);text-align:center;z-index:2}
+  .splash-wordmark{position:absolute;left:0;right:0;top:calc(50% + 98px);text-align:center;z-index:2;padding:0 24px}
   .sw1{font-family:var(--mono);font-size:12px;letter-spacing:.42em;color:var(--cream-soft)}
-  .sw2{font-family:var(--mono);font-size:10px;letter-spacing:.34em;color:rgba(248,238,218,.34);margin-top:10px}
-  .splash-hint{position:absolute;left:0;right:0;bottom:46px;text-align:center;z-index:2;animation:hintPulse 3.6s ease-in-out infinite}
-  .splash-hint a{font-family:var(--mono);font-size:11px;letter-spacing:.44em;color:rgba(248,238,218,.6)}
+  .tagline{
+    max-width:600px;margin:18px auto 0;
+    font-family:var(--body);font-weight:300;font-size:15px;line-height:1.75;
+    color:rgba(248,238,218,.55);letter-spacing:.01em;
+  }
 
   @keyframes floatY{0%,100%{transform:translateY(0)}50%{transform:translateY(-16px)}}
   @keyframes glowPulse{0%,100%{opacity:.5;transform:translate(-50%,-50%) scale(1)}50%{opacity:.9;transform:translate(-50%,-50%) scale(1.08)}}
   @keyframes glowSoft{0%,100%{opacity:.62}50%{opacity:1}}
-  @keyframes hintPulse{0%,100%{opacity:.28}50%{opacity:.72}}
   @keyframes twinkle{0%,100%{opacity:.12}50%{opacity:.92}}
   @keyframes driftA{0%{transform:translate(0)}25%{transform:translate(18px,-22px)}50%{transform:translate(-12px,-40px)}75%{transform:translate(14px,-16px)}100%{transform:translate(0)}}
   @keyframes driftB{0%{transform:translate(0)}30%{transform:translate(-20px,-14px)}60%{transform:translate(16px,-30px)}100%{transform:translate(0)}}
   @keyframes driftC{0%{transform:translate(0)}25%{transform:translate(-16px,18px)}55%{transform:translate(20px,6px)}80%{transform:translate(-10px,22px)}100%{transform:translate(0)}}
 
-  /* ============ SECTIONS ============ */
-  .inner{max-width:880px;margin:0 auto;padding:0 clamp(20px,5vw,40px)}
-  section.block{position:relative;padding:130px 0}
-  .seclabel{display:flex;align-items:center;gap:18px;margin-bottom:54px}
-  .seclabel span{font-family:var(--mono);font-size:11px;letter-spacing:.34em;color:var(--gold);white-space:nowrap}
-  .seclabel .rule{height:1px;flex:1;background:linear-gradient(90deg,rgba(224,162,90,.4),rgba(224,162,90,0))}
-
-  .statement{
-    font-size:clamp(1.7rem,4.4vw,2.9rem);font-weight:500;line-height:1.28;
-    letter-spacing:-.01em;color:var(--cream);
-  }
-  .statement em{font-style:normal;color:var(--gold-2)}
-  .statement-sub{margin-top:34px;max-width:560px;color:var(--cream-dim);font-weight:300;font-size:1.02rem}
-
-  /* team */
-  .partners{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,64px)}
-  .partner{border-top:1px solid rgba(244,237,227,.14);padding-top:30px}
-  .partner h3{font-weight:600;font-size:1.35rem;letter-spacing:.01em;color:var(--cream)}
-  .partner .role{font-family:var(--mono);font-size:10.5px;letter-spacing:.26em;color:var(--gold);margin:10px 0 18px;text-transform:uppercase}
-  .partner p{color:var(--cream-dim);font-weight:300;font-size:.95rem;line-height:1.7}
-
-  /* footer */
-  footer{border-top:1px solid rgba(244,237,227,.1);padding:52px 0 60px}
-  .foot-row{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
-  .foot-brand{display:flex;align-items:center;gap:14px}
-  .foot-glyph{width:17px;height:23px;fill:var(--cream-soft)}
-  .foot-brand span{font-family:var(--mono);font-size:11px;letter-spacing:.34em;color:var(--cream-soft)}
-  .foot-meta{font-family:var(--mono);font-size:10px;letter-spacing:.22em;color:rgba(248,238,218,.3)}
-
-  /* reveal on scroll */
-  .reveal{opacity:0;transform:translateY(26px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
-  .reveal.on{opacity:1;transform:none}
-
   @media (max-width:720px){
-    .partners{grid-template-columns:1fr}
-    section.block{padding:90px 0}
     .splash-lantern{width:76px;height:103px}
     .splash-wordmark{top:calc(50% + 84px)}
+    .tagline{font-size:14px}
   }
   @media (prefers-reduced-motion:reduce){
     *,:before,:after{animation:none!important;transition:none!important}
-    .reveal{opacity:1;transform:none}
   }
 </style>
 </head>
 <body>
 
-<!-- SPLASH -->
 <header class="splash" id="top">
   <div class="splash-void"></div>
 
@@ -166,65 +125,9 @@
 
   <div class="splash-wordmark">
     <div class="sw1">LANTERN CAPITAL</div>
-    <div class="sw2">MACHINES · LEDGERS</div>
+    <p class="tagline">Lantern Capital is a fund built to be the trusted bridge to Asia for global deep&nbsp;tech and biotech founders.</p>
   </div>
-
-  <div class="splash-hint"><a href="#thesis">SCROLL</a></div>
 </header>
 
-<!-- THESIS -->
-<section class="block" id="thesis">
-  <div class="inner">
-    <div class="seclabel reveal"><span>01 – THESIS</span><span class="rule"></span></div>
-    <p class="statement reveal">Lantern Capital invests in founders that accelerate communication between <em>machines</em> and the <em>ledger</em>.</p>
-  </div>
-</section>
-
-<!-- PARTNERS -->
-<section class="block" id="team">
-  <div class="inner">
-    <div class="seclabel reveal"><span>02 – PARTNERS</span><span class="rule"></span></div>
-    <div class="partners">
-      <div class="partner reveal">
-        <h3>Gökhan Er</h3>
-        <div class="role">Co-Founder &amp; Managing Partner</div>
-        <p>Investing in crypto since 2017 with a focus on early-stage infrastructure. Gökhan spent four years as Managing Director at IOSG Ventures, and before that worked on strategy at Huobi Global's Beijing headquarters as one of the firm's first foreign employees. He earned his Master's from Peking University with a thesis on China's role in global crypto markets. Fluent in Mandarin, English, and Turkish, he spends most of his time in Hong Kong after 8+ years in Beijing and Shenzhen.</p>
-      </div>
-      <div class="partner reveal">
-        <h3>Tomasz K. Stańczak</h3>
-        <div class="role">Co-Founder &amp; General Partner</div>
-        <p>Building at the core of Ethereum since 2017, Tomasz is a Co-Founder and General Partner of Lantern Capital through Nethermind, and currently serves as Co-Executive Director at the Ethereum Foundation. He founded Nethermind, a leading crypto research and engineering firm, and served as CEO of Twinstake, an institutional staking platform with over $2B in AUM. He has held governance roles at the Starknet Foundation and Forta, and was an early team member at Flashbots.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer>
-  <div class="inner">
-    <div class="foot-row">
-      <a class="foot-brand" href="#top">
-        <svg class="foot-glyph" viewBox="0 0 43.21 58.59" aria-hidden="true" focusable="false">
-          <rect y="26.72" width="13.92" height="5.13"/>
-          <rect x="29.29" y="26.73" width="13.92" height="5.13"/>
-          <rect x="19.04" width="5.13" height="13.92"/>
-          <rect x="13.91" y="44.67" width="5.13" height="13.92"/>
-          <rect x="24.17" y="44.67" width="5.13" height="13.92"/>
-          <rect y="16.84" width="43.21" height="6.23"/>
-          <rect y="35.52" width="43.21" height="6.23"/>
-        </svg>
-        <span>LANTERN CAPITAL</span>
-      </a>
-      <div class="foot-meta">© 2026 LANTERN CAPITAL</div>
-    </div>
-  </div>
-</footer>
-
-<script>
-  const io = new IntersectionObserver((entries)=>{
-    for (const e of entries) if (e.isIntersecting){ e.target.classList.add('on'); io.unobserve(e.target); }
-  },{threshold:.18});
-  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
-</script>
 </body>
 </html>
