@@ -1,0 +1,24 @@
+name: Fetch calligraphy asset
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download ink-lantern.jpg if missing
+        run: |
+          if [ ! -f ink-lantern.jpg ]; then
+            curl -fL -o ink-lantern.jpg https://thelanternsummit.com/speakers/can-you-implement-th.jpg
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add ink-lantern.jpg
+            git commit -m "Add calligraphy asset from thelanternsummit.com"
+            git push
+          else
+            echo "asset already present"
+          fi
