@@ -73,6 +73,19 @@
     font-family:var(--body);font-weight:300;font-size:15px;line-height:1.75;
     color:rgba(248,238,218,.55);letter-spacing:.01em;
   }
+  .summit-line{
+    max-width:600px;margin:10px auto 0;
+    font-family:var(--mono);font-size:10px;line-height:1.7;
+    color:rgba(248,238,218,.42);letter-spacing:.05em;
+  }
+  .summit-line a{
+    color:rgba(247,221,160,.78);text-decoration:none;
+    border-bottom:1px solid rgba(247,221,160,.34);
+    transition:color .2s ease,border-color .2s ease;
+  }
+  .summit-line a:hover,.summit-line a:focus-visible{
+    color:var(--gold-2);border-color:var(--gold-2);
+  }
 
   @keyframes floatY{0%,100%{transform:translateY(0)}50%{transform:translateY(-16px)}}
   @keyframes glowPulse{0%,100%{opacity:.5;transform:translate(-50%,-50%) scale(1)}50%{opacity:.9;transform:translate(-50%,-50%) scale(1.08)}}
@@ -126,6 +139,7 @@
   <div class="splash-wordmark">
     <div class="sw1">LANTERN CAPITAL</div>
     <p class="tagline">Lantern Capital is a fund built to be the trusted bridge to Asia for global deep&nbsp;tech and biotech founders.</p>
+    <p class="summit-line">Lantern Capital hosts <a href="https://thelanternsummit.com/">Lantern Summit</a>, bringing Chinese and Western biotech leaders together in Shanghai.</p>
   </div>
 </header>
 
